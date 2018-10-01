@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "107563963701",
+    "firebase_url": "https://picolab-c4b9b.firebaseio.com",
+    "project_id": "picolab-c4b9b",
+    "storage_bucket": "picolab-c4b9b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107563963701:android:7dbfe8e490c0c355",
+        "android_client_info": {
+          "package_name": "com.picolab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107563963701-r3km4ntvo1a00h83gok0gsosq517q284.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.picolab",
+            "certificate_hash": "cfa1d797a53d3759617528279bf1f6f59600da21"
+          }
+        },
+        {
+          "client_id": "107563963701-o8s21ck62ak1g3vqq5seklhhjuuf4kfa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3WzMpRa0Z25UTsv4_vspegvfIotJ3d9g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107563963701-o8s21ck62ak1g3vqq5seklhhjuuf4kfa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
