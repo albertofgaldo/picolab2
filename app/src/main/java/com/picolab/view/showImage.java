@@ -22,18 +22,21 @@ import com.android.volley.toolbox.Volley;
 import com.picolab.R;
 import com.picolab.application.Controller.CanvasController;
 import com.picolab.domain.CanvasImage;
+import com.picolab.utils.MyListener;
 import com.squareup.picasso.Picasso;
+import com.picolab.utils.ShowMessage;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class showImage extends AppCompatActivity {
+public class showImage extends AppCompatActivity implements MyListener {
 
     TextView count;
     ImageView image;
     Button showImageButton;
+    ShowMessage showMessage;
 
-    CanvasController canvasController;
+    CanvasController canvasController = new CanvasController(this);
 
     private RequestQueue queue;
     protected static CanvasImage canvasImage = new CanvasImage();
@@ -64,11 +67,22 @@ public class showImage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-               canvasController.obtenerDatosGet(showImage.this,image);
-
+                canvasImage=canvasController.obtenerDatosGet(showImage.this,image);
+                if(canvasImage==null){
+                    showMessage.toast(showImage.this, "No se ha recibido imagen");
+                }else{
+                    callback("loadImageSucced");
+                }
             }
         });
     }
+
+    @Override
+    public void callback(String result) {
+            startCountDown();
+            showImageButton.setEnabled(false);
+    }
+
     public void startCountDown(){
         new CountDownTimer(10000, 1000) {
 
